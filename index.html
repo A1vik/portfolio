@@ -1,13 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/normalize.css">
   <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   <title>Portfolio</title>
 </head>
+
 <body>
-  
+  <header class="page-header">
+    <div class="container">
+      <div class="navigation">
+        <h1 class="navigation__title">Portfolio</h1>
+        <a class="logo" href="https://github.com/A1vik">A1vik</a>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item  menu__item">
+              <a href="#" class="menu__link menu__link--active">Home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">About me</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">My projects</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <h2 class="subtitle">
+        Hello, my name is Alexader. <br>
+        This web page about me and my projects.
+      </h2>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="container">
+      <section class="about">
+        <img class="about__avatar" src="" alt="avatar">
+        <p class="about__info">
+          <h2 class="about__title"></h2>
+          <a class="about__social" href=""></a>
+        </p>
+      </section>
+
+      <section class="education">
+        <div class="education__panel">
+          <h2 class="education__title">Education</h2>
+          <button class="education__button"></button>
+        </div>
+        <ul class="education__list">
+          <li class="education__item">
+            <span class="education__institution">School</span>
+            <span class="education__years"></span>
+          </li>
+          <li class="education__item">
+            <span class="education__institution">University</span>
+            <span class="education__years"></span>
+          </li>
+          <li class="education__item">
+            <span class="education__institution">HTML Academy</span>
+            <span class="education__years">2019</span>
+          </li>
+          <li class="education__item">
+            <span class="education__institution">Hexlet.io (Web JS developer)</span>
+            <span class="education__years">2019</span>
+          </li>
+          <li class="education__item">
+            <span class="education__institution">RSSchool Courses</span>
+            <span class="education__years">2019-2020</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="projects slider">
+        <h2 class="projects__title">Projects</h2>
+        <ul class="slider__list">
+          <li class="slider__item js-show">
+            <div class="slider__description">
+              <h3 class="slider__name"></h3>
+              <ul class="slider__advantages">
+                <li class="slider__advantage"></li>
+                <li class="slider__advantage"></li>
+                <li class="slider__advantage"></li>
+              </ul>
+              <button class="slider__b"></button>
+            </div>
+            <a href="#" class="slider__link">
+              <img src="" alt="" class="slider__image">
+            </a>
+          </li>
+          <li class="slider__item">
+            <div class="slider__description">
+              <h3 class="slider__name"></h3>
+              <ul class="slider__advantages">
+                <li class="slider__advantage"></li>
+                <li class="slider__advantage"></li>
+                <li class="slider__advantage"></li>
+              </ul>
+              <button class="slider__b"></button>
+            </div>
+            <a href="#" class="slider__link">
+              <img src="" alt="" class="slider__image">
+            </a>
+          </li>
+        </ul>
+        <button class="slider__button slider__button--left"></button>
+        <button class="slider__button slider__button--right"></button>
+      </section>
+    </div>
+  </main>
 </body>
+
 </html>

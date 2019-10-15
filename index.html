@@ -16,17 +16,21 @@
     <div class="container">
       <div class="navigation">
         <h1 class="navigation__title">Portfolio</h1>
-        <a class="logo" href="https://github.com/A1vik">A1vik</a>
+        <a class="logo" href="https://github.com/A1vik">
+          <span class="logo__name">A1vik</span>
+          <img class="logo__image" src="./assets/img/iconfinder_github_291716.svg" alt="my github repo" width="30">
+        </a>
+        
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item  menu__item">
               <a href="#" class="menu__link menu__link--active">Home</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">About me</a>
+              <a href="#about" class="menu__link">About me</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">My projects</a>
+              <a href="#projects" class="menu__link">My projects</a>
             </li>
           </ul>
         </nav>
@@ -40,72 +44,79 @@
 
   <main class="page-main">
     <div class="container">
-      <section class="about">
-        <img class="about__avatar" src="" alt="avatar">
-        <p class="about__info">
-          <h2 class="about__title"></h2>
-          <a class="about__social" href=""></a>
-        </p>
+
+      <section id="about" class="about">
+        <img class="about__avatar" src="./assets/img/avatar.JPG" alt="avatar">
+        <div class="about__info">
+          <h2 class="about__title">Alexader Berezin</h2>
+          <a href="https://github.com/A1vik" class="about__social">Github</a>
+        </div>
       </section>
 
       <section class="education">
         <div class="education__panel">
-          <h2 class="education__title">Education</h2>
-          <button class="education__button"></button>
+          <h2 id="education-title" class="education__title">Education</h2>
         </div>
-        <ul class="education__list">
+        <ul class="education__list hide">
           <li class="education__item">
             <span class="education__institution">School</span>
-            <span class="education__years"></span>
+            <br>
+            <span class="education__years">1996-2006</span>
           </li>
           <li class="education__item">
-            <span class="education__institution">University</span>
-            <span class="education__years"></span>
+            <span class="education__institution">University ISTU</span>
+            <br>
+            <span class="education__years">2006-2011</span>
           </li>
           <li class="education__item">
             <span class="education__institution">HTML Academy</span>
+            <br>
             <span class="education__years">2019</span>
           </li>
           <li class="education__item">
             <span class="education__institution">Hexlet.io (Web JS developer)</span>
+            <br>
             <span class="education__years">2019</span>
           </li>
           <li class="education__item">
             <span class="education__institution">RSSchool Courses</span>
+            <br>
             <span class="education__years">2019-2020</span>
           </li>
         </ul>
       </section>
 
-      <section class="projects slider">
+      <section id="projects" class="projects slider">
         <h2 class="projects__title">Projects</h2>
         <ul class="slider__list">
-          <li class="slider__item js-show">
+          <li class="slider__item active">
             <div class="slider__description">
-              <h3 class="slider__name"></h3>
+              <h3 class="slider__name">Theyallow</h3>
               <ul class="slider__advantages">
-                <li class="slider__advantage"></li>
-                <li class="slider__advantage"></li>
-                <li class="slider__advantage"></li>
+                <li class="slider__advantage">HTML5</li>
+                <li class="slider__advantage">CSS3</li>
+                <li class="slider__advantage">BEM</li>
               </ul>
-              <button class="slider__b"></button>
+              <p class="slider__text">Click on image to see the project</p>
             </div>
-            <a href="#" class="slider__link">
-              <img src="" alt="" class="slider__image">
+            <a href="./theyallow/index.html" class="slider__link">
+              <img class="slider__image" src="./assets/img/THEYALOW Desktop.jpg" alt="screenshot 'theyallow' page">
             </a>
           </li>
           <li class="slider__item">
             <div class="slider__description">
-              <h3 class="slider__name"></h3>
+              <h3 class="slider__name">Repair design project</h3>
               <ul class="slider__advantages">
-                <li class="slider__advantage"></li>
-                <li class="slider__advantage"></li>
-                <li class="slider__advantage"></li>
+                <li class="slider__advantage">HTML5</li>
+                <li class="slider__advantage">CSS3</li>
+                <li class="slider__advantage">Responsive</li>
+                <li class="slider__advantage">BEM</li>
+                <li class="slider__advantage">SASS</li>
               </ul>
-              <button class="slider__b"></button>
+              <p class="slider__text">Click on image to see the project</p>
             </div>
-            <a href="#" class="slider__link">
-              <img src="" alt="" class="slider__image">
+            <a href="./repair-design-project/index.html" class="slider__link">
+              <img src="./assets/img/repair.png" alt="screenshot 'repair' page" class="slider__image">
             </a>
           </li>
         </ul>
@@ -114,6 +125,8 @@
       </section>
     </div>
   </main>
+
+  <script src="./main.js"></script>
 </body>
 
 </html>

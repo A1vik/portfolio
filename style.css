@@ -58,6 +58,12 @@ img {
   font-size: 1px;
 }
 
+@media (max-width: 1000px) {
+  .page-header {
+    height: 50vh;
+  }
+}
+
 /* Logo */
 .logo__name {
   margin-right: 20px;
@@ -243,6 +249,18 @@ img {
 
 .slider__button--right {
   right: 1%;
+}
+
+@media (max-width: 1000px) {
+  .slider__button {
+    top: 200px;
+  }
+}
+
+@media (max-width: 650px) {
+  .slider__text {
+    display: none;
+  }
 }
 
 /* JS */

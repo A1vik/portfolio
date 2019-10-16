@@ -35,3 +35,36 @@ const goToSlide = (n) => {
 
 sliderBtnLeft.addEventListener('click', prevSlide);
 sliderBtnRight.addEventListener('click', nexSlide);
+
+
+// swiper
+
+const slider = document.querySelector('.slider');
+
+let posXstart = 0;
+let posXend = 0;
+
+const slideMove = () => {
+  const n = posXstart - posXend;
+  if (n >= 120) {
+    goToSlide(currentSlide + 1);
+  } else if (n <= -120) {
+    goToSlide(currentSlide - 1);
+  }
+};
+
+
+console.log(posXstart);
+
+const positionStartHandler = (e) => {
+  posXstart = e.targetTouches[0].clientX;
+};
+
+const positionEndHandler = (e) => {
+  posXend = e.targetTouches[0].clientX;
+};
+
+
+slider.addEventListener('touchstart', positionStartHandler);
+slider.addEventListener('touchmove', positionEndHandler);
+slider.addEventListener('touchend', slideMove);

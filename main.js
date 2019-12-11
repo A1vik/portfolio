@@ -53,9 +53,6 @@ const slideMove = () => {
   }
 };
 
-
-console.log(posXstart);
-
 const positionStartHandler = (e) => {
   posXstart = e.targetTouches[0].clientX;
 };
@@ -68,3 +65,17 @@ const positionEndHandler = (e) => {
 slider.addEventListener('touchstart', positionStartHandler);
 slider.addEventListener('touchmove', positionEndHandler);
 slider.addEventListener('touchend', slideMove);
+
+
+//description
+
+const descrBtn = document.querySelector('.slider__show-desc');
+
+descrBtn.addEventListener('click', () => {
+  console.log(currentSlide);
+  if (currentSlide === 0) {
+    document.querySelector('.slider__advantages--yallow').classList.toggle('hide--mobile');
+  } else if (currentSlide === 1) {
+    document.querySelector('.slider__advantages--repair').classList.toggle('hide--mobile');
+  }
+});

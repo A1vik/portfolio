@@ -145,11 +145,25 @@ img {
   cursor: pointer;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+  
 }
 
 .education__title--show {
   position: relative;
   cursor: pointer;
+}
+
+.education__list {
+  animation: show 1.5s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .education__title--show::after {
@@ -251,6 +265,15 @@ img {
   right: 1%;
 }
 
+.hide--mobile {
+  display: block;
+}
+
+.slider__show-desc {
+  display: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1000px) {
   .slider__button {
     top: 200px;
@@ -258,19 +281,55 @@ img {
 }
 
 @media (max-width: 650px) {
+  .slider__button {
+    display: none;
+  }
+  .hide--mobile {
+    display: none;
+  }
   .slider__text {
     display: none;
+  }
+  .slider__show-desc {
+    display: block;
+  }
+
+  .slider__link {
+    width: auto;
+  }
+  .slider__list {
+    padding-left: 0;
+  }
+  .slider__description {
+    position: relative;
+  }
+  .slider__advantages {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-25%);
+    background-color: gray;
+    padding: 50px;
+    border-radius: 5px;
   }
 }
 
 /* JS */
 .hide {
   display: none;
+  opacity: 0;
 }
+
+
 
 .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 650px) {
+  .active {
+    flex-direction: column;
+  }
 }
 /*# sourceMappingURL=style.css.map */

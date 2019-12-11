@@ -39,18 +39,30 @@ sliderBtnRight.addEventListener('click', nexSlide);
 
 // swiper
 
-const slider = document.querySelector('.slider');
+const slider = document.querySelector('.slider__list');
 
 let posXstart = 0;
 let posXend = 0;
 
 const slideMove = () => {
+  if (posXend < 10) {
+    posXstart = 0;
+    posXend = 0;
+    return;
+  }
   const n = posXstart - posXend;
+  console.log('NUM', n);
   if (n >= 120) {
     goToSlide(currentSlide + 1);
+    posXstart = 0;
+    posXend = 0;
   } else if (n <= -120) {
     goToSlide(currentSlide - 1);
-  }
+    posXstart = 0;
+    posXend = 0;
+  } 
+  posXstart = 0;
+  posXend = 0;
 };
 
 const positionStartHandler = (e) => {
@@ -73,6 +85,8 @@ const descrBtn = document.querySelector('.slider__show-desc');
 
 descrBtn.addEventListener('click', () => {
   console.log(currentSlide);
+  console.log('END', posXend);
+  console.log('Start', posXstart)
   if (currentSlide === 0) {
     document.querySelector('.slider__advantages--yallow').classList.toggle('hide--mobile');
   } else if (currentSlide === 1) {
